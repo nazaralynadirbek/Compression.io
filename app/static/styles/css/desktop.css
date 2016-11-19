@@ -17,7 +17,6 @@
 .wrapper .top .header .bottom .description p {
   color: #9a9a9a;
   font-size: 15px;
-  font-family: "Helvetica Neue Regular", "Arial", sans-serif;
 }
 .wrapper .middle {
   padding: 50px 0;
@@ -27,13 +26,24 @@
   height: 200px;
   margin: 0 auto;
   text-align: center;
-  background-color: #f7f7f7;
+  position: relative;
+  border: 3px dashed #c1c1c1;
+  background-color: transparent;
 }
-.wrapper .middle .files span {
-  color: #9a9a9a;
-  font-size: 13px;
+.wrapper .middle .files .desc {
   text-align: center;
   line-height: 200px;
+}
+.wrapper .middle .files .desc span {
+  color: #9a9a9a;
+  font-size: 13px;
+}
+.wrapper .middle .files .form {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .wrapper .bottom .footer .copyright {
   text-align: center;
