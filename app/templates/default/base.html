@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/css/desktop.css') }}">
+
+    <!-- Scripts -->
+    <script src="https://use.fontawesome.com/bfaf4700e0.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div class="header">
+                <div class="top">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="{{ title }}">
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="description">
+                        <p>Simple tool for compress your images</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <div class="bottom">
+            {% include 'default/blocks/footer.html' %}
+        </div>
+    </div>
+</body>
+</html>

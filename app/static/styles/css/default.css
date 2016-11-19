@@ -1,0 +1,15 @@
+html, body, h1, h2, h3, h4, h5, h6, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #fff;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+}
