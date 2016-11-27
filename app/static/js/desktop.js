@@ -39,8 +39,10 @@ $(document).ready(function() {
 
             if (event.target.status == 200) {
                 drop.addClass('success');
+                drop.find('span').html('<i class="fa fa-icons fa-check-circle"></i>')
             } else {
                 drop.addClass('failed');
+                drop.find('span').html('<i class="fa fa-icons fa-times-circle"></i>')
             }
         }
     }

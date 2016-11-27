@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
 # File uploading
-UPLOAD_FOLDER = 'app/static/images/upload/'
+UPLOAD_FOLDER = 'app/static/img/upload/'

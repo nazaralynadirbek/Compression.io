@@ -41,31 +41,44 @@
     padding: 50px 0;
 
     .files {
-      width: 400px;
-      height: 200px;
+      color: @text;
+      width: 500px;
+      height: 250px;
       margin: 0 auto;
+      overflow: hidden;
       text-align: center;
       position: relative;
       border: 3px dashed #c1c1c1;
       background-color: transparent;
 
       span {
-        color: @text;
         font-size: 13px;
-        line-height: 200px;
+        line-height: 250px;
       }
 
       &.active {
+        color: @active;
         border-color: @active;
       }
       &.progress {
+        color: @progress;
         border-color: @progress;
       }
       &.success {
+        color: @success;
         border-color: @success;
+
+        span {
+          font-size: 26px;
+        }
       }
       &.failed {
+        color: @failed;
         border-color: @failed;
+
+        span {
+          font-size: 26px;
+        }
       }
     }
   }

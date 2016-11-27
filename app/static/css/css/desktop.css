@@ -22,30 +22,41 @@
   padding: 50px 0;
 }
 .wrapper .middle .files {
-  width: 400px;
-  height: 200px;
+  color: #9a9a9a;
+  width: 500px;
+  height: 250px;
   margin: 0 auto;
+  overflow: hidden;
   text-align: center;
   position: relative;
   border: 3px dashed #c1c1c1;
   background-color: transparent;
 }
 .wrapper .middle .files span {
-  color: #9a9a9a;
   font-size: 13px;
-  line-height: 200px;
+  line-height: 250px;
 }
 .wrapper .middle .files.active {
+  color: #909090;
   border-color: #909090;
 }
 .wrapper .middle .files.progress {
+  color: #e8d58d;
   border-color: #e8d58d;
 }
 .wrapper .middle .files.success {
+  color: #9be88d;
   border-color: #9be88d;
 }
+.wrapper .middle .files.success span {
+  font-size: 26px;
+}
 .wrapper .middle .files.failed {
+  color: #e88d8d;
   border-color: #e88d8d;
+}
+.wrapper .middle .files.failed span {
+  font-size: 26px;
 }
 .wrapper .bottom .footer .copyright {
   text-align: center;
