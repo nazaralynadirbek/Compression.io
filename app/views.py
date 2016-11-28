@@ -12,17 +12,12 @@ from flask import render_template
 
 from werkzeug.utils import secure_filename
 
+from PIL import Image
+
 @app.route('/')
 @app.route('/index')
 def index():
-    # Check folder exists
-    if not os.path.exists(app.config['UPLOAD_FOLDER'] + '/original'):
-        os.makedirs(app.config['UPLOAD_FOLDER'] + '/original')
-
-    if not os.path.exists(app.config['UPLOAD_FOLDER'] + '/compressed'):
-        os.makedirs(app.config['UPLOAD_FOLDER'] + '/compressed')
-
-    return render_template('default/pages/index.html', source_image=None)
+    return render_template('default/pages/index.html')
 
 @app.route('/upload', methods=['GET','POST'])
 def upload():
@@ -35,6 +30,10 @@ def upload():
         filename = file.filename
 
         file.save(os.path.abspath(app.config['UPLOAD_FOLDER'] + '/original/' + filename))
+
+        # Compress
+        compressed = Image.open(file)
+        compressed.save(os.path.abspath(app.config['UPLOAD_FOLDER'] + '/compressed/' + filename), quality=50)
 
         return jsonify({'status': 'success'})
     else:
